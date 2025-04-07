@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #003580;
+}
+
+header {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #003580;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #003580;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+.nav-btn:hover {
+    background: #e6f0fa;
+    border-radius: 20px;
+}
+
+.auth-section, .search-section, .profile, .partner {
+    padding: 2rem;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-container h2 {
+    margin-bottom: 1.5rem;
+}
+
+#toggleAuth {
+    margin-top: 1rem;
+    color: #003580;
+    cursor: pointer;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-section {
+    background: #febb02;
+}
+
+.search-container h1 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.search-form {
+    background: white;
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    flex: 1;
+    position: relative;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-right: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 100px;
+    border: 1px solid #ddd;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px #003580;
+}
+
+.search-btn {
+    background: #003580;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.search-btn:hover {
+    background: #00224f;
+}
+
+.filters {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.results, .bookings, .profile, .partner {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.property-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.property-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 1rem;
+    flex: 1;
+}
+
+.property-info h3 {
+    color: #003580;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    margin: 0.5rem 0;
+    color: #febb02;
+}
+
+.book-btn {
+    background: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem;
+    align-self: center;
+}
+
+.book-btn:hover {
+    background: #e31c5f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    width: 400px;
+    margin: 10% auto;
+    border-radius: 8px;
+}
+
+.large-modal {
+    width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+footer {
+    background: #f7f7f7;
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.review {
+    border-top: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.partner-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    background: #e6f0fa;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: #003580;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anita's Brand - Book Your Stay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Anita's Brand</div>
+        <nav>
+            <button id="showBookingsBtn" class="nav-btn">My Bookings</button>
+            <button id="showProfileBtn" class="nav-btn">Profile</button>
+            <button id="showPartnerBtn" class="nav-btn">Partner Dashboard</button>
+            <button id="loginBtn" class="nav-btn">Sign In</button>
+            <button id="logoutBtn" class="nav-btn" style="display: none;">Sign Out</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section" id="authSection" style="display: none;">
+            <div class="auth-container">
+                <h2 id="authTitle">Sign In</h2>
+                <form id="authForm">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <label><input type="checkbox" id="isPartner"> Partner Account</label>
+                    <button type="submit" class="search-btn">Sign In</button>
+                    <p id="toggleAuth">Need an account? Sign Up</p>
+                </form>
+            </div>
+        </section>
+
+        <section class="search-section" id="searchSection">
+            <div class="search-container">
+                <h1>Find your next stay</h1>
+                <form id="searchForm" class="search-form">
+                    <div class="form-group">
+                        <input type="text" id="location" placeholder="Where are you going?">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="checkIn" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="checkOut" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="guests" min="1" placeholder="Guests" required>
+                    </div>
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                <div class="filters">
+                    <select id="sortBy">
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                    <input type="number" id="maxPrice" placeholder="Max Price" min="0">
+                    <label><input type="checkbox" id="freeCancel"> Free Cancellation</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="results" id="results">
+            <!-- Results will be populated here -->
+        </section>
+
+        <section class="bookings" id="bookingsList" style="display: none;">
+            <h2>Your Bookings</h2>
+            <div id="bookingItems"></div>
+        </section>
+
+        <section class="profile" id="profileSection" style="display: none;">
+            <h2>Your Profile</h2>
+            <div id="profileInfo"></div>
+        </section>
+
+        <section class="partner" id="partnerSection" style="display: none;">
+            <h2>Partner Dashboard</h2>
+            <div class="partner-tabs">
+                <button class="tab-btn" onclick="showTab('listings')">Listings</button>
+                <button class="tab-btn" onclick="showTab('calendar')">Calendar</button>
+                <button class="tab-btn" onclick="showTab('pricing')">Pricing</button>
+                <button class="tab-btn" onclick="showTab('messages')">Messages</button>
+                <button class="tab-btn" onclick="showTab('analytics')">Analytics</button>
+            </div>
+            <div id="partnerContent"></div>
+        </section>
+
+        <div class="modal" id="paymentModal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <h2>Complete Your Booking</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Card Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name on Card" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="MM/YY" required>
+                        <input type="text" placeholder="CVV" required>
+                    </div>
+                    <label><input type="checkbox" id="saveCard"> Save card for future bookings</label>
+                    <button type="submit" class="search-btn">Confirm Payment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="propertyModal">
+            <div class="modal-content large-modal">
+                <span class="close">×</span>
+                <div id="propertyDetails"></div>
+            </div>
+        </div>
+
+        <div class="modal" id="messageModal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <h2>Send Message</h2>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <textarea id="messageText" placeholder="Type your message" required></textarea>
+                    </div>
+                    <button type="submit" class="search-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Anita's Brand. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
